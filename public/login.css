@@ -1,0 +1,227 @@
+:root{
+--primary:#ff8c42;
+--primary-light:#ffb26b;
+--cyan:#00ffff;
+--bg:#0f1117;
+--card:#171a23;
+--card2:#1d2230;
+--border:#2a3142;
+--text:#ffffff;
+--text-light:#bfc6d6;
+--shadow:0 10px 35px rgba(0,0,0,0.35);
+--radius:22px;
+--logo:Tektur;
+--headings:Archivo;
+}
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:var(--headings);
+background:
+radial-gradient(circle at top left,#1b1f2b 0%,#0f1117 45%),
+#0f1117;
+color:var(--text);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow-y:auto;
+}
+
+/* BACKGROUND GLOW */
+
+body::before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,140,66,0.15);
+filter:blur(120px);
+top:-100px;
+left:-100px;
+border-radius:50%;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(0,255,255,0.08);
+filter:blur(120px);
+bottom:-100px;
+right:-100px;
+border-radius:50%;
+}
+
+/* CONTAINER */
+
+.container{
+position:relative;
+z-index:10;
+width:100%;
+max-width:420px;
+}
+
+/* BRAND */
+
+.brand{
+text-align:center;
+margin-bottom:30px;
+}
+
+.brand h1{
+font-family:var(--logo);
+font-size:42px;
+color:var(--primary);
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+.brand p{
+color:var(--text-light);
+font-size:15px;
+}
+
+/* FORM BOX */
+
+.form-box{
+background:rgba(23,26,35,0.92);
+border:1px solid var(--border);
+backdrop-filter:blur(14px);
+padding:35px;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.form-box h2{
+font-size:30px;
+margin-bottom:25px;
+color:var(--primary);
+text-align:center;
+}
+
+/* INPUTS */
+
+.input-group{
+margin-bottom:20px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:600;
+color:var(--text-light);
+}
+
+.input-group input{
+width:100%;
+padding:16px;
+border-radius:16px;
+border:1px solid var(--border);
+background:var(--card2);
+color:white;
+font-size:15px;
+outline:none;
+transition:0.3s;
+font-family:var(--headings);
+}
+
+.input-group input:focus{
+border-color:var(--primary);
+box-shadow:0 0 0 4px rgba(255,140,66,0.15);
+}
+
+.input-group input::placeholder{
+color:#7c8396;
+}
+
+/* LOGIN MESSAGE */
+
+#login-message{
+margin-top:5px;
+font-size:13px;
+color:#ff7272;
+min-height:18px;
+}
+
+/* BUTTON */
+
+.btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:18px;
+background:linear-gradient(
+135deg,
+var(--primary),
+#ff6b00
+);
+color:white;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+margin-top:10px;
+font-family:var(--headings);
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(255,140,66,0.35);
+}
+
+/* SWITCH */
+
+.switch{
+margin-top:22px;
+text-align:center;
+font-size:14px;
+color:var(--text-light);
+}
+
+.switch a{
+color:var(--primary);
+text-decoration:none;
+font-weight:700;
+}
+
+.switch a:hover{
+color:var(--primary-light);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:500px){
+
+.form-box{
+padding:25px;
+border-radius:22px;
+}
+
+.brand h1{
+font-size:32px;
+}
+
+.form-box h2{
+font-size:24px;
+}
+
+.input-group input{
+padding:14px;
+}
+
+.btn{
+padding:14px;
+}
+
+}
