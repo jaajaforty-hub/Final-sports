@@ -24,7 +24,7 @@ const db = new Pool({
 // ================= ROUTES =================
 
 // Public pages
-app.get("/", (req, res) => res.sendFile("games.html", { root: "public" }));
+app.get("/", (req, res) => res.sendFile("login.html", { root: "public" }));
 app.get("/login", (req, res) => res.sendFile("login.html", { root: "public" }));
 app.get("/register", (req, res) => res.sendFile("register.html", { root: "public"}));
 
