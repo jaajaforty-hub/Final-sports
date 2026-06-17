@@ -130,7 +130,7 @@ function auth(req, res, next) {
     }
 }
 
-app.get("/soccer",  (req, res) => {
+app.get("/soccer",auth, (req, res) => {
     res.sendFile("games.html",{root: "public"})
 });
 app.get("/nfl", auth, (req, res) => {
